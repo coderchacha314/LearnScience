@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LearnScience.AfterRegistration"
+             BackgroundColor="#112B47">
+    <ContentPage.Content>
+        <StackLayout  Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Label Text="Congratulation 😊✌"  HorizontalOptions="Center" TextColor="Goldenrod" ></Label>
+            <Label Text="You are Succesfully Register👍" HorizontalOptions="Center" TextColor="Goldenrod"></Label>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Kindly Find Your Registration details" TextColor="Gray"></Span>
+                        <Span Text=" Click here" TextColor="Gray" FontAttributes="Bold" TextDecorations="Underline"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+
+            </Label>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text=" Click here for Login" TextColor="Gray" FontAttributes="Bold" TextDecorations="Underline"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Login"/>
+                </Label.GestureRecognizers>
+
+            </Label>
+            <ListView x:Name="Datalist">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell  Text="{Binding name}" Detail="{Binding password }"></TextCell>
+                    </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

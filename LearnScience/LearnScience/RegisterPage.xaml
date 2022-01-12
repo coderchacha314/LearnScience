@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LearnScience.RegisterPage"
+             BackgroundColor="#112B47">
+    <ContentPage.Content>
+
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Label Text="🔬Welcome to the World of Science🔭"
+                    TextColor="Gold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Image Source="regi.png" WidthRequest="180" HeightRequest="180"></Image>
+            <Label Text="Enrollment Form"
+                    TextColor="White"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtName"  Placeholder="Name" TextColor="White" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtMobile" Placeholder="Mobile"  PlaceholderColor="Gray" Keyboard="Numeric"></Entry>
+            <Entry x:Name="txtEmail" Placeholder="Email" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" PlaceholderColor="Gray"></Entry>
+            <Button
+                VerticalOptions="Center"
+                Text="Register" 
+                TextColor="White"
+                BackgroundColor="Transparent"
+                BorderColor="ForestGreen"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Button_Clicked">
+            </Button>
+
+            <Label HorizontalOptions="Center">
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
